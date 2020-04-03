@@ -1,8 +1,11 @@
-import axios from 'axios';
+// import axios from 'axios';
+
+var axios = require('axios');
 
 const api = axios.create({
   baseURL:
     'http://servicos.receita.fazenda.gov.br/Servicos/certidao/CndConjuntaInter',
 });
 
-export default api;
+module.exports = api;
+// export default api;

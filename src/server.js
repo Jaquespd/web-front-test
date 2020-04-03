@@ -1,9 +1,14 @@
 // import 'dotenv/config';
 
-import express from 'express';
-import cors from 'cors';
+// import express from 'express';
+// import cors from 'cors';
 
-import api from './services/api';
+// import api from './services/api';
+
+var express = require('express');
+var cors = require('cors');
+
+var api = require('./services/api');
 
 var app = express();
 
