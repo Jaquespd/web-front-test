@@ -1,9 +1,13 @@
+import 'dotenv/config';
+
 import express from 'express';
 import cors from 'cors';
 
 import api from './services/api';
 
 var app = express();
+
+app.use(cors());
 
 app.get('/', async function(req, res) {
   // const response = await api.get('https://atalhos-sma.firebaseapp.com/');
@@ -13,4 +17,4 @@ app.get('/', async function(req, res) {
   res.json(response.data);
 });
 
-app.listen(3333);
+app.listen(process.env.PORT || 3333);
